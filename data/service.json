@@ -1,118 +1,123 @@
 [
-    {
-      "title": "Couples Counseling",
-      "des": "Couples therapy focuses on the pattern of interactions between two people, while allowing for the individual histories and contributions of each member. It is a treatment modality used in a variety of clinical situations—as part of a child evaluation (to assess the contribution of marital distress to a child's symptoms); in divorce mediation and child custody evaluations (to minimize the intensity of relational conflict that interferes with collaborative problem solving); in ongoing child and adolescent psychotherapy (when the parents' relationship is thought to play a part in a child's unhappiness); and as part of an ongoing family therapy (when the couple may be seen separately from the family as a whole). Couples therapy is often the treatment of choice for a range of problems: sexual dysfunction,1 alcohol and substance abuse,2 the disclosure of an infidelity,3 depression and anxiety disorders,4 infertility,5,6 serious medical illness,7 and parenting impasses.8 In addition, couples therapy may be helpful in the resolution of polarized relational issues (e.g., the decision to marry or divorce, the choice to have a child or an abortion, or the decision to move to another city for one partner's career). In this chapter, the term couples therapy is used rather than marital therapy so as to include therapy with homosexual couples and unmarried heterosexual couples.",
-      "benifits": [
-        "Improving communication skills between two people",
-        "Discovering the root causes of major points of conflicts",
-        "Creating better understanding",
-        "Encouraging better acceptance of one another",
-        "Providing the opportunity to increase shared support",
-        "Restoring emotional and physical intimacy",
-        "Decreasing emotional detachment or avoidance",
-        "Restoring emotional strength and building relationship resilience",
-        "Restoring lost trust between a couple",
-        "Providing a secure environment and opportunity to heal."
-      ],
-      "price": "230",
-      "rating": "4.5",
-      "img":"https://img.freepik.com/free-photo/marriage-counselor-taking-notes-while-having-meeting-with-couple-office_637285-11122.jpg?w=1060&t=st=1667886888~exp=1667887488~hmac=e9883142ca9c191eeb62acb2a4d5be4eb92140474ccd8f94c582668f00fb8a6f",
-      "img2":"https://img.freepik.com/free-vector/marriage-counseling-concept-illustration_114360-3002.jpg?w=1060&t=st=1667894652~exp=1667895252~hmac=f8f59d2844f31384b79dca39dde1ac560f251e7d269541feeb404b1c934fa352"
-    },
-    {
-      "title": "Depression Therapy",
-      "des": "Depression (major depressive disorder) is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Fortunately, it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed. It can lead to a variety of emotional and physical problems and can decrease your ability to function at work and at home.Also, medical conditions (e.g., thyroid problems, a brain tumor or vitamin deficiency) can mimic symptoms of depression so it is important to rule out general medical causes.",
-      "Depression": {},
-      "benifits": [
-        "Prolonged sadness or feelings of emptiness.",
-        "Remore Feelings of helplessness or hopelessness.",
-        "Overcome feelings of guilt or worthlessness.",
-        "Control Anger and irritability.",
-        "Remove Difficulty concentrating.",
-        "habit of daily sleep",
-        "make many friends",
-        "Help to remove suicidal idea"
-      ],
-      "rating": "4.5",
-      "price": "270",
-      "img":"https://img.freepik.com/free-photo/appointment-psychologist_144627-39525.jpg?w=1060&t=st=1667893799~exp=1667894399~hmac=8b87b76c6df60439da527eed3f6e18b1a401e73412caa267a2a722c414787007",
-      "img2":"https://img.freepik.com/free-vector/woman-visiting-psychologist_74855-4824.jpg?w=1380&t=st=1667894606~exp=1667895206~hmac=ab40ad061966c4c48a2662173c313d1a1181151f4ee7441eaba812379bbfb97b"
-    },{
-      "title": "Self Esteme Therapy",
-      "des": "There could be many reasons for low self-esteem viz. unhappy childhood, poor academic performance, relationship issues or breakdown, financial troubles, family pressure, and most importantly beliefs.Many of us recover from low self-esteem on our own by adopting new ways and perspectives but some of us keep cursing the happenings of life and continue to feel bad about it.Self Esteem represents how one feels about themselves; how confident and valuable they feel, and how they see their worth. People with high self-esteem feel good about themselves whereas people with low self-esteem have self-doubt and feel shame.Low Self-esteem may lead to symptoms of mental health conditions like anxiety and depression.If you or someone close to you is going through this phase then Pour Your Heart is the right spot where you can find the right therapy that helps you improve your perspective of life and boost self-esteem.",
-      "benifits": [
-        "Improving Self Awareness.",
-        "Improved Communication Skills.",
-        "Coping Skill Development.",
-        "Self-Exploration",
-        "Getting a New View.",
-        "Make a lot of frineds.",
-        "remove fear of strangers"
-      ],
-      "price":"200",
-      "rating":"4.5",
-      "img":"https://img.freepik.com/free-photo/man-sitting-psychologist-s-office-talking-about-problems_1157-28376.jpg?w=1060&t=st=1667894016~exp=1667894616~hmac=b05d00156530e73d3a3699b4d0599b079c171087d4df50165f934641d7a2a600",
-      "img2":"https://img.freepik.com/free-photo/blonde-girl-green-shirt-pointing_144627-58940.jpg?w=1380&t=st=1667894560~exp=1667895160~hmac=37f214b8dcb8df828cad5ea1629a9aa46228e5c8a3f3b61689f590333103b431"
-    },
-    {
-      "title": "Kids and Family",
-      "des": "All families face difficult times in life and in such tough times, we need the support and love of our family members. But, sometimes it is not possible as there are conflicts and disagreements between the members. Hence, resulting in depression, anxiety, sadness, and other mental disturbances.There can be conflicts due to financial crisis, disagreement, and difficulties between siblings, mental illness of any member, member with special needs in the family, the academic performance of children, issues with extended family members, etc.To overcome such issues and conflicts in the family, one needs kids and family counseling. If you or someone you know is going through such tough times then Pour Your Heart is the right spot for you.",
-      "benifits": [
-        "developing healthy boundaries",
-        "mproving communication",
-        "defining someone's role within the family",
-        "improving family dynamics and relationships",
-        "providing strength and coping tools for family members",
-        "addressing dysfunctional interactions",
-        "improving the family's problem-solving abilities",
-        "respect children as individuals",
-        "Learning to set",
-        "enforce and respect boundaries",
-        "Defining the roles of individual family members",
-        "Learning to love and regard other family members and oneself"
-      ],
-      "price":"300",
-      "rating":"4.5",
-      "img":"https://img.freepik.com/free-photo/family-counseling-session-home-with-therapist-pshycologist-showing-pictures-emotions-girl-african-american-father-european-mother_1157-47489.jpg?w=1060&t=st=1667894083~exp=1667894683~hmac=7c932a478fb9503b55452d7c836233f3225c23e4a80a683bd7ebac28fdf2bb4b",
-      "img2":"https://img.freepik.com/free-vector/family-therapy-landing-page-with-married-couple_107791-10937.jpg?w=1060&t=st=1667894713~exp=1667895313~hmac=623d8a1f4019061a617c9540f08839364dd718c8bf71b02bb1b24a74517f8d3b"
-    
-    },
-    {
-      "title": "Life and Future Planing",
-      "des": "We all need a goal to live and work for; something that keeps us motivated to work and grow in life. Some want to become an artist whereas some may be willing to become an architect or a successful businessman.To have dreams is a good thing to keep going in life. We all make aims and goals but not all of us achieve what we have thought. There could be many reasons for this like family expectations, financial issues, or loss of interest.Some of us are willing to work towards our goals but we are so lazy to start. Humans have this habit of postponing the things on tomorrow and usually that tomorrow never comes and all our dreams are back-sided.If you or someone you know has goals but face difficulty in starting or do nothing about them then our counseling sessions can help:",
-      "benifits": [
-        "Gain A Sense Of Purpose.",
-        "Confidenc of You Are Now In Control your life",
-        "You Can List Some Goals.",
-        "You Can Make Those Goals Reality.",
-        "You Get Much Faster Results.",
-        ") You Can Map Your Time Better.",
-        "Plans Make You Feel Good.",
-        "Decreasing potential for family conflicts",
-        "Knowing what to expect financially"
-      ],
-      "price": "340",
-      "rating": "4.5",
-      "img": "https://img.freepik.com/free-photo/group-three-young-good-looking-startupers-sitting-light-coworking-space-talking-about-future-project-looking-through-design-examples-digital-tablet-friends-smiling-talking-about-work_176420-8284.jpg?w=1060&t=st=1667894152~exp=1667894752~hmac=bb42cfaef3dd707857af5d1fb7eaba22caa35c231327eb6174fae2490f6d066b",
-      "img2": "https://img.freepik.com/free-vector/tiny-business-person-career-directions-opportunities-female-character-with-plans-future-job-positive-vision-flat-vector-illustration-success-strategy-life-goal-concept-banner_74855-22562.jpg?w=1380&t=st=1667894330~exp=1667894930~hmac=35b41b6f8ed054c96ca800374940b1ed7e784400224d9bf504378d81186da373"
-    },
-    {
-      "title": "Old Age Therapy",
-      "des": "Aging is a transition from middle age to later years. It is a natural process that can affect different individuals differently. Some may adjust to the changes and some may find it difficult to deal with mental and physical changes.We all know that aging brings its drawbacks and issues; mental, physical, and emotional changes that are not easy to deal with.Many old-aged people go into depression or lose their interest in life seeing themselves aging or may fear the loss of life. They may suffer from anxiety, sexual dysfunction, sleep problems, and behavioral changes.If you or someone you know is suffering from aging problems, mental health issues then our old age therapy can help.",
-      "benifits": [
-        "Develop a More Positive Outlook on Life",
-        "Awakens the Mind to Fresh Ways of Looking at the World",
-        "Teach You to Seek Help",
-        "Develop a Long-Term Strategy",
-        "Encourage a Shift in Behavior",
-        "Supports and Validates Your Ideas",
-        "Promotes Self-Discovery",
-        ""
-      ],
-      "price":"200",
-      "rating":"4.5",
-      "img":"https://img.freepik.com/free-photo/old-senior-asian-friends-retired-people-hapiness-positive-laugh-smile-conversation-together-living-room-nursing-home-seniors-participating-group-activities-adult-daycare-center_609648-3038.jpg?w=1060&t=st=1667894190~exp=1667894790~hmac=f11ff92333ebea97e8e3000923e4d3717129e748629cd5f57807fc665ef713fb",
-      "img2":"https://img.freepik.com/free-vector/seniors-nursing-home-hospice-volunteers-care-elderly-characters-wheelchair-aged-men-women-playing-cards-communicate-oldies-lifestyle-rehabilitation-linear-flat-vector-illustration_107791-11909.jpg?w=1380&t=st=1667894253~exp=1667894853~hmac=2a7f614c3af7fbc8dc18fa1e841f7b2d0978fcecccf07fbbbf98077a420e01c7"
-    }
-    
+  {
+    "title": "Couples Counseling",
+    "des": "We may find our dream love but sometimes the most beautiful relationships can also have conflicts and harm our mental health which can lead to depression, anxiety, insecurity, and even cause one to think about committing suicide.Love is all that we want from the person we love and when the expectations are not met, we feel low and bad about life.If you or someone you know is suffering from such a mental state, then you have landed on the right page. We are Pour Your Heart and we offer dating and relationship counseling that can help one to overcome the pain of suffering.",
+    "benifits": [
+      "Improving communication skills between two people",
+      "Discovering the root causes of major points of conflicts",
+      "Creating better understanding",
+      "Encouraging better acceptance of one another",
+      "Providing the opportunity to increase shared support",
+      "Restoring emotional and physical intimacy",
+      "Decreasing emotional detachment or avoidance",
+      "Restoring emotional strength and building relationship resilience",
+      "Restoring lost trust between a couple",
+      "Providing a secure environment and opportunity to heal."
+    ],
+    "price": "230",
+    "rating": "4.5",
+    "img": "https://img.freepik.com/free-photo/marriage-counselor-taking-notes-while-having-meeting-with-couple-office_637285-11122.jpg?w=1060&t=st=1667886888~exp=1667887488~hmac=e9883142ca9c191eeb62acb2a4d5be4eb92140474ccd8f94c582668f00fb8a6f",
+    "banner-img": "https://img.freepik.com/free-vector/marriage-counseling-concept-illustration_114360-3002.jpg?w=1060&t=st=1667894652~exp=1667895252~hmac=f8f59d2844f31384b79dca39dde1ac560f251e7d269541feeb404b1c934fa352",
+    "banner-title":"We all need love and affection in our lives; we search for the right partner who can understand us and love us the way we are."
+  },
+  {
+    "title": "Depression Therapy",
+    "des": "Depression (major depressive disorder) is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Fortunately, it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed. It can lead to a variety of emotional and physical problems and can decrease your ability to function at work and at home.Also, medical conditions (e.g., thyroid problems, a brain tumor or vitamin deficiency) can mimic symptoms of depression so it is important to rule out general medical causes.",
+    "Depression": {},
+    "benifits": [
+      "Prolonged sadness or feelings of emptiness.",
+      "Remore Feelings of helplessness or hopelessness.",
+      "Overcome feelings of guilt or worthlessness.",
+      "Control Anger and irritability.",
+      "Remove Difficulty concentrating.",
+      "habit of daily sleep",
+      "make many friends",
+      "Help to remove suicidal idea"
+    ],
+    "rating": "4.5",
+    "price": "270",
+    "img": "https://img.freepik.com/free-photo/appointment-psychologist_144627-39525.jpg?w=1060&t=st=1667893799~exp=1667894399~hmac=8b87b76c6df60439da527eed3f6e18b1a401e73412caa267a2a722c414787007",
+    "banner-img": "https://img.freepik.com/free-vector/woman-visiting-psychologist_74855-4824.jpg?w=1380&t=st=1667894606~exp=1667895206~hmac=ab40ad061966c4c48a2662173c313d1a1181151f4ee7441eaba812379bbfb97b",
+    "banner-title":"Depression can be sorrow, unhappiness, dejection, despair, or extreme sadness that can for days or even months."
+  },
+  {
+    "title": "Self Esteme Therapy",
+    "des": "There could be many reasons for low self-esteem viz. unhappy childhood, poor academic performance, relationship issues or breakdown, financial troubles, family pressure, and most importantly beliefs.Many of us recover from low self-esteem on our own by adopting new ways and perspectives but some of us keep cursing the happenings of life and continue to feel bad about it.Self Esteem represents how one feels about themselves; how confident and valuable they feel, and how they see their worth. People with high self-esteem feel good about themselves whereas people with low self-esteem have self-doubt and feel shame.Low Self-esteem may lead to symptoms of mental health conditions like anxiety and depression.If you or someone close to you is going through this phase then Pour Your Heart is the right spot where you can find the right therapy that helps you improve your perspective of life and boost self-esteem.",
+    "benifits": [
+      "Improving Self Awareness.",
+      "Improved Communication Skills.",
+      "Coping Skill Development.",
+      "Self-Exploration",
+      "Getting a New View.",
+      "Make a lot of frineds.",
+      "remove fear of strangers"
+    ],
+    "price": "200",
+    "rating": "4.5",
+    "img": "https://img.freepik.com/free-photo/man-sitting-psychologist-s-office-talking-about-problems_1157-28376.jpg?w=1060&t=st=1667894016~exp=1667894616~hmac=b05d00156530e73d3a3699b4d0599b079c171087d4df50165f934641d7a2a600",
+    "banner-img": "https://img.freepik.com/free-photo/blonde-girl-green-shirt-pointing_144627-58940.jpg?w=1380&t=st=1667894560~exp=1667895160~hmac=37f214b8dcb8df828cad5ea1629a9aa46228e5c8a3f3b61689f590333103b431",
+    "banner-title":"At some point in life, we all go through the low phases where we start underestimating ourselves, doubt our capabilities, and may also develop lack of confidence."
+  },
+  {
+    "title": "Kids and Family",
+    "des": "All families face difficult times in life and in such tough times, we need the support and love of our family members. But, sometimes it is not possible as there are conflicts and disagreements between the members. Hence, resulting in depression, anxiety, sadness, and other mental disturbances.There can be conflicts due to financial crisis, disagreement, and difficulties between siblings, mental illness of any member, member with special needs in the family, the academic performance of children, issues with extended family members, etc.To overcome such issues and conflicts in the family, one needs kids and family counseling. If you or someone you know is going through such tough times then Pour Your Heart is the right spot for you.",
+    "benifits": [
+      "developing healthy boundaries",
+      "mproving communication",
+      "defining someone's role within the family",
+      "improving family dynamics and relationships",
+      "providing strength and coping tools for family members",
+      "addressing dysfunctional interactions",
+      "improving the family's problem-solving abilities",
+      "respect children as individuals",
+      "Learning to set",
+      "enforce and respect boundaries",
+      "Defining the roles of individual family members",
+      "Learning to love and regard other family members and oneself"
+    ],
+    "price": "300",
+    "rating": "4.5",
+    "img": "https://img.freepik.com/free-photo/family-counseling-session-home-with-therapist-pshycologist-showing-pictures-emotions-girl-african-american-father-european-mother_1157-47489.jpg?w=1060&t=st=1667894083~exp=1667894683~hmac=7c932a478fb9503b55452d7c836233f3225c23e4a80a683bd7ebac28fdf2bb4b",
+    "banner-img": "https://img.freepik.com/free-vector/family-therapy-landing-page-with-married-couple_107791-10937.jpg?w=1060&t=st=1667894713~exp=1667895313~hmac=623d8a1f4019061a617c9540f08839364dd718c8bf71b02bb1b24a74517f8d3b",
+    "banner-title":"Parents is the best teacher for children and children are the preciouse things for parents"
+  },
+  {
+    "title": "Life and Future Planing",
+    "des": "We all need a goal to live and work for; something that keeps us motivated to work and grow in life. Some want to become an artist whereas some may be willing to become an architect or a successful businessman.To have dreams is a good thing to keep going in life. We all make aims and goals but not all of us achieve what we have thought. There could be many reasons for this like family expectations, financial issues, or loss of interest.Some of us are willing to work towards our goals but we are so lazy to start. Humans have this habit of postponing the things on tomorrow and usually that tomorrow never comes and all our dreams are back-sided.If you or someone you know has goals but face difficulty in starting or do nothing about them then our counseling sessions can help:",
+    "benifits": [
+      "Gain A Sense Of Purpose.",
+      "Confidenc of You Are Now In Control your life",
+      "You Can List Some Goals.",
+      "You Can Make Those Goals Reality.",
+      "You Get Much Faster Results.",
+      ") You Can Map Your Time Better.",
+      "Plans Make You Feel Good.",
+      "Decreasing potential for family conflicts",
+      "Knowing what to expect financially"
+    ],
+    "price": "340",
+    "rating": "4.5",
+    "img": "https://img.freepik.com/free-photo/group-three-young-good-looking-startupers-sitting-light-coworking-space-talking-about-future-project-looking-through-design-examples-digital-tablet-friends-smiling-talking-about-work_176420-8284.jpg?w=1060&t=st=1667894152~exp=1667894752~hmac=bb42cfaef3dd707857af5d1fb7eaba22caa35c231327eb6174fae2490f6d066b",
+    "banner-img": "https://img.freepik.com/free-vector/tiny-business-person-career-directions-opportunities-female-character-with-plans-future-job-positive-vision-flat-vector-illustration-success-strategy-life-goal-concept-banner_74855-22562.jpg?w=1380&t=st=1667894330~exp=1667894930~hmac=35b41b6f8ed054c96ca800374940b1ed7e784400224d9bf504378d81186da373",
+    "banner-title":"Psychlogist Eshan Benjamin here not only motivate you but help you make a brighter future whether it is family, job, finance, or relationship with others, we help you build a life full of happiness and prosperity."
+  },
+  {
+    "title": "Old Age Therapy",
+    "des": "Aging is a transition from middle age to later years. It is a natural process that can affect different individuals differently. Some may adjust to the changes and some may find it difficult to deal with mental and physical changes.We all know that aging brings its drawbacks and issues; mental, physical, and emotional changes that are not easy to deal with.Many old-aged people go into depression or lose their interest in life seeing themselves aging or may fear the loss of life. They may suffer from anxiety, sexual dysfunction, sleep problems, and behavioral changes.If you or someone you know is suffering from aging problems, mental health issues then our old age therapy can help.",
+    "benifits": [
+      "Develop a More Positive Outlook on Life",
+      "Awakens the Mind to Fresh Ways of Looking at the World",
+      "Teach You to Seek Help",
+      "Develop a Long-Term Strategy",
+      "Encourage a Shift in Behavior",
+      "Supports and Validates Your Ideas",
+      "Promotes Self-Discovery",
+      ""
+    ],
+    "price": "200",
+    "rating": "4.5",
+    "img": "https://img.freepik.com/free-photo/old-senior-asian-friends-retired-people-hapiness-positive-laugh-smile-conversation-together-living-room-nursing-home-seniors-participating-group-activities-adult-daycare-center_609648-3038.jpg?w=1060&t=st=1667894190~exp=1667894790~hmac=f11ff92333ebea97e8e3000923e4d3717129e748629cd5f57807fc665ef713fb",
+    "banner-img": "https://img.freepik.com/free-vector/seniors-nursing-home-hospice-volunteers-care-elderly-characters-wheelchair-aged-men-women-playing-cards-communicate-oldies-lifestyle-rehabilitation-linear-flat-vector-illustration_107791-11909.jpg?w=1380&t=st=1667894253~exp=1667894853~hmac=2a7f614c3af7fbc8dc18fa1e841f7b2d0978fcecccf07fbbbf98077a420e01c7",
+    "banner-title":"We all know that aging brings its drawbacks and issues; mental, physical, and emotional changes that are not easy to deal with."
+  }
 ]
