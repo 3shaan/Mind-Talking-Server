@@ -70,10 +70,19 @@ async function run() {
     //review get based on service 
     app.get('/review/:id', async (req, res) => {
         const id = req.params.id;
-        const query = { "serviceId": {"$in":[id]} };
+        const query = { "serviceId": { "$in": [id] } };
+        const result = await reviewCollection.find(query).toArray();
+        res.send(result);
+    });
+
+    // get review by email 
+    app.get('/myreview/:email', async (req, res) => {
+        const email = req.params.email;
+        const query = { "email": { "$in": [email] } };
         const result = await reviewCollection.find(query).toArray();
         res.send(result);
     })
+
 
 }
 run().catch(err => console.log(err));
