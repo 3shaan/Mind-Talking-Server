@@ -26,6 +26,7 @@ const client = new MongoClient(uri, {
 });
 async function run() {
     const serviceCollection = client.db('mind-talking').collection('services');
+    const reviewCollection = client.db("mind-talking").collection("review");
     //get all service
 
     app.get('/services', async (req, res) => {
@@ -57,7 +58,23 @@ async function run() {
         const query = { _id: { $ne: ObjectId(id) } }
         const result = await serviceCollection.find(query).toArray();
         res.send(result);
+    });
+
+    // get all review 
+    app.get('/review', async (req, res) => {
+        const query = {};
+        const result = await reviewCollection.find(query).toArray();
+        res.send(result);
+    });
+
+    //review get based on service 
+    app.get('/review/:id', async (req, res) => {
+        const id = req.params.id;
+        const query = { "serviceId": {"$in":[id]} };
+        const result = await reviewCollection.find(query).toArray();
+        res.send(result);
     })
+
 }
 run().catch(err => console.log(err));
 
