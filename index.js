@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000
 require("dotenv").config();
+const jwt = require("jsonwebtoken");
 
 
 //middle ware
@@ -14,6 +15,23 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send('mind talking server is running')
 })
+
+//token verify function 
+const verifyjwt = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+      if (!authHeader) {
+        return res.status(401).send({ message: "unauthorized access, Token absence" });
+      }
+    console.log(authHeader);
+    jwt.verify(authHeader, process.env.WEB_TOKEN, (err, decoder) => {
+        if (err) {
+            return res.status(401).send({ message: "unauthorized access, token problem" }); 
+        }
+        req.decoder = decoder;
+        next();
+     })
+    
+}
 
 //mongodb
 
@@ -27,6 +45,16 @@ const client = new MongoClient(uri, {
 async function run() {
     const serviceCollection = client.db('mind-talking').collection('services');
     const reviewCollection = client.db("mind-talking").collection("review");
+
+    // jwt token
+    app.post('/jwt', (req, res) => {
+        const user = req.body;
+        const token = jwt.sign(user, process.env.WEB_TOKEN, { expiresIn: '1hr' });
+        res.send({token});
+    })
+
+
+
     //get all service
 
     app.get('/services', async (req, res) => {
@@ -34,10 +62,19 @@ async function run() {
         const service = await serviceCollection.find(query).toArray();
         res.send(service);
     });
+
+    //post all services
+
+    app.post("/services", verifyjwt, async (req, res) => {
+      const data = req.body;
+      const result = await serviceCollection.insertOne(data);
+      res.send(result);
+    });
+
     // limit services
     app.get('/homeservice', async (req, res) => {
         const query = {};
-        const service = await serviceCollection.find(query).limit(3).toArray();
+        const service = await serviceCollection.find(query).limit(3).sort({_id:-1}).toArray();
         res.send(service);
     });
 
@@ -76,11 +113,11 @@ async function run() {
     });
 
     // get review by email 
-    app.get('/myreview/:email', async (req, res) => {
-        const email = req.params.email;
-        const query = { "email": { "$in": [email] } };
-        const result = await reviewCollection.find(query).toArray();
-        res.send(result);
+    app.get("/myreview/:email", verifyjwt, async (req, res) => {
+      const email = req.params.email;
+      const query = { email: { $in: [email] } };
+      const result = await reviewCollection.find(query).toArray();
+      res.send(result);
     });
 
     // get review by review id 
