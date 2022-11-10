@@ -22,7 +22,6 @@ const verifyjwt = (req, res, next) => {
       if (!authHeader) {
         return res.status(401).send({ message: "unauthorized access, Token absence" });
       }
-    console.log(authHeader);
     jwt.verify(authHeader, process.env.WEB_TOKEN, (err, decoder) => {
         if (err) {
             return res.status(401).send({ message: "unauthorized access, token problem" }); 
@@ -45,6 +44,7 @@ const client = new MongoClient(uri, {
 async function run() {
     const serviceCollection = client.db('mind-talking').collection('services');
     const reviewCollection = client.db("mind-talking").collection("review");
+    const blogsCollection = client.db("mind-talking").collection("blogs");
 
     // jwt token
     app.post('/jwt', (req, res) => {
@@ -159,7 +159,14 @@ async function run() {
         const query = { _id: ObjectId(id) }
         const result = reviewCollection.deleteOne(query);
         res.send(result);
-    })
+    });
+
+    // blogs
+
+    app.get('/blogs', async(req, res) => {
+        const result = await blogsCollection.find({}).toArray();
+        res.send(result);
+   })
 
 
 
