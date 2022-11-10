@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.send('mind taling server is running')
+    res.send('mind talking server is running')
 })
 
 //mongodb
@@ -81,7 +81,49 @@ async function run() {
         const query = { "email": { "$in": [email] } };
         const result = await reviewCollection.find(query).toArray();
         res.send(result);
+    });
+
+    // get review by review id 
+    app.get("/user_review/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await reviewCollection.findOne(query);
+      res.send(result);
+    });
+
+    // review post
+    app.post("/review", async (req, res) => {
+        const data = req.body;
+        const result = reviewCollection.insertOne(data);
+        res.send(result)
+    });
+
+    // patch review based on id 
+    app.put("/user_review/:id", async (req, res) => {
+        const id = req.params.id;
+        const data = req.body;
+        const query = { _id: ObjectId(id) };
+        const option = { upsert: true };
+        const updateReview = {
+            $set: {
+                name: data.name,
+                rating: data.rating,
+                img: data.img,
+                comment:data.comment
+            }
+        }
+        const result = await reviewCollection.updateOne(query, updateReview, option);
+        res.send(result);
+    });
+
+    //delete review
+    app.delete("/user_review/:id", (req, res) => {
+        const id = req.params.id;
+        const query = { _id: ObjectId(id) }
+        const result = reviewCollection.deleteOne(query);
+        res.send(result);
     })
+
 
 
 }
