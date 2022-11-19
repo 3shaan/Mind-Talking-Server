@@ -272,11 +272,54 @@ async function run() {
     });
 
     // users collection 
-    app.post('/users',async (req, res) => {
+    app.post('/users', async (req, res) => {
         const user = req.body;
         console.log(user)
         const result = await usersCollection.insertOne(user);
         res.send(result);
+    });
+
+    //all users get
+    
+    app.get("/users", verifyjwt, async (req, res) => {
+        const email = req.decoder.email;
+        const query = {};
+        const user = await usersCollection.findOne({ email });
+        if (user?.roll !== "admin") {
+          return res.sendStatus(403);
+        }
+      const result = await usersCollection.find(query).toArray();
+      res.send(result);
+    });
+    
+    //make admin 
+    app.put("/users/admin/:id", verifyjwt, async (req, res) => {
+        const email = req.decoder.email;
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+        const user = await usersCollection.findOne({email});
+        console.log(user)
+        if (user?.roll !== "admin") {
+            return res.sendStatus(403);
+        }
+      const updateUser = {
+        $set: {
+          roll: "admin",
+        },
+      };
+      const result = await usersCollection.updateOne(query, updateUser, {
+        upsert: true,
+      });
+      console.log(result);
+    });
+
+    // check admin
+
+    app.get("/users/admin/:email", async (req, res) => {
+        const email = req.params.email;
+        const query = { email };
+        const result = await usersCollection.findOne(query);
+        res.send({isAdmin: result?.roll === "admin"});
     })
 
 
