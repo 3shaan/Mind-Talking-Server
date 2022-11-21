@@ -6,12 +6,14 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const { query } = require('express');
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 
 //middle ware
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
 
 
 app.get('/', (req, res) => {
@@ -34,6 +36,10 @@ const verifyjwt = (req, res, next) => {
     
 }
 
+// admin check
+
+
+
 //mongodb
 
 // const uri = `mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0`;
@@ -51,6 +57,7 @@ async function run() {
     const appointmentCollection = client.db('mind-talking').collection('appointment');
     const bookingCollection = client.db('mind-talking').collection('bookings');
     const usersCollection = client.db('mind-talking').collection('users');
+    const doctorsCollection = client.db('mind-talking').collection('doctors');
 
     // jwt token
     app.post('/jwt',async(req, res) => {
@@ -68,6 +75,18 @@ async function run() {
     })
 
 
+    // verify admin middle ware 
+    const adminCheck = async (req, res, next) => {
+      const email = req.decoder.email;
+      const query = { email };
+        const admin = await usersCollection.findOne(query);
+        if (admin.roll !== 'admin') {
+            return res.sendStatus(403);
+        }
+       return next();
+    };
+
+
 
     //get all service
 
@@ -76,6 +95,13 @@ async function run() {
         const service = await serviceCollection.find(query).toArray();
         res.send(service);
     });
+
+    // service name collection 
+     app.get("/services_name", async (req, res) => {
+       const query = {};
+       const service = await serviceCollection.find(query).project({title:1}).toArray();
+       res.send(service);
+     });
 
     //post all services
 
@@ -209,7 +235,6 @@ async function run() {
         const alreadyBooked = await bookingCollection.find(query).toArray();
 
         if (alreadyBooked.length) {
-            console.log(alreadyBooked);
             const message = `you already booked on this ${bookingData.appointmentDate}`
             return res.send({ acknowledged: false, message });
         }
@@ -266,7 +291,12 @@ async function run() {
     // appointment get
     app.get("/bookings", async (req, res) => {
         const email = req.query.email;
-        const query = { email: email };
+        const query = { email };
+        const isAdmin = await usersCollection.findOne(query);
+        if (isAdmin?.roll === 'admin') {
+            const result = await bookingCollection.find({}).toArray();
+            return res.send(result);
+        }
         const result = await bookingCollection.find(query).toArray();
         res.send(result);
     });
@@ -274,7 +304,6 @@ async function run() {
     // users collection 
     app.post('/users', async (req, res) => {
         const user = req.body;
-        console.log(user)
         const result = await usersCollection.insertOne(user);
         res.send(result);
     });
@@ -282,26 +311,15 @@ async function run() {
     //all users get
     
     app.get("/users", verifyjwt, async (req, res) => {
-        const email = req.decoder.email;
-        const query = {};
-        const user = await usersCollection.findOne({ email });
-        if (user?.roll !== "admin") {
-          return res.sendStatus(403);
-        }
+      const query = {};
       const result = await usersCollection.find(query).toArray();
       res.send(result);
     });
     
     //make admin 
-    app.put("/users/admin/:id", verifyjwt, async (req, res) => {
-        const email = req.decoder.email;
+    app.put("/users/admin/:id", verifyjwt, adminCheck, async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
-        const user = await usersCollection.findOne({email});
-        console.log(user)
-        if (user?.roll !== "admin") {
-            return res.sendStatus(403);
-        }
       const updateUser = {
         $set: {
           roll: "admin",
@@ -310,7 +328,7 @@ async function run() {
       const result = await usersCollection.updateOne(query, updateUser, {
         upsert: true,
       });
-      console.log(result);
+        res.send(result);
     });
 
     // check admin
@@ -319,9 +337,47 @@ async function run() {
         const email = req.params.email;
         const query = { email };
         const result = await usersCollection.findOne(query);
-        res.send({isAdmin: result?.roll === "admin"});
-    })
+        res.send({ isAdmin: result?.roll === "admin" });
+    });
 
+    // add doctors
+
+    app.post("/doctors", verifyjwt, adminCheck, async (req, res) => {
+      const data = req.body;
+      const result = await doctorsCollection.insertOne(data);
+      res.send(result);
+    });
+
+    // all doctors get
+    app.get("/doctors", verifyjwt, adminCheck, async (req, res) => {
+      const email = req.decoder.email;
+      const query = {};
+      const result = await doctorsCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    // delete doctors
+
+    app.delete("/doctors/:id", verifyjwt, adminCheck, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await doctorsCollection.deleteOne(query);
+      res.send(result);
+    });
+
+    // stripe payments
+
+    app.post('/payments', async (req, res) => {
+        const price = req.body.price
+        const payment = await stripe.paymentIntents.create({
+          amount: price,
+          currency: "usd",
+          payment_method_types: ["card"],
+        });
+        res.send({
+            clientSecret:payment.client_secret,
+        })
+    })
 
 }
 run().catch(err => console.log(err));
