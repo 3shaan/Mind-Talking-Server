@@ -58,6 +58,7 @@ async function run() {
     const bookingCollection = client.db('mind-talking').collection('bookings');
     const usersCollection = client.db('mind-talking').collection('users');
     const doctorsCollection = client.db('mind-talking').collection('doctors');
+    const paymentsCollection = client.db('mind-talking').collection('payments');
 
     // jwt token
     app.post('/jwt',async(req, res) => {
@@ -171,7 +172,7 @@ async function run() {
     // review post
     app.post("/review", async (req, res) => {
         const data = req.body;
-        const result = reviewCollection.insertOne(data);
+        const result = await reviewCollection.insertOne(data);
         res.send(result)
     });
 
@@ -194,10 +195,10 @@ async function run() {
     });
 
     //delete review
-    app.delete("/user_review/:id", (req, res) => {
+    app.delete("/user_review/:id", async (req, res) => {
         const id = req.params.id;
         const query = { _id: ObjectId(id) }
-        const result = reviewCollection.deleteOne(query);
+        const result = await reviewCollection.deleteOne(query);
         res.send(result);
     });
 
@@ -368,15 +369,39 @@ async function run() {
     // stripe payments
 
     app.post('/payments', async (req, res) => {
-        const price = req.body.price
+        const price = req?.body?.servicePrice;
         const payment = await stripe.paymentIntents.create({
-          amount: price,
-          currency: "usd",
-          payment_method_types: ["card"],
+            amount: price,
+            currency: "usd",
+            payment_method_types: ["card"],
         });
         res.send({
-            clientSecret:payment.client_secret,
+            clientSecret: payment.client_secret,
         })
+    });
+
+   // get data in payment section
+    
+    app.get('/payment/:id', async (req, res) => {
+        const id = req.params.id;
+        const query = { _id: ObjectId(id) };
+        const result = await bookingCollection.findOne(query);
+        res.send(result);
+    });
+
+    // store users payment info in database 
+    app.post('/payments_info',async (req, res) => {
+        const data = req.body;
+        const query = { _id: ObjectId(data.serviceId) };
+        const updateDoc = {
+            $set: {
+                paid:true
+            }
+        }
+
+        const updateBookings = await bookingCollection.updateOne(query, updateDoc, { upsert: true });
+        const result = await paymentsCollection.insertOne(data);
+        res.send(result);
     })
 
 }
